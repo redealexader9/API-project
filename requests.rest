@@ -1,0 +1,107 @@
+
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+// create new user
+{
+    "username": "ralexander",
+    "firstname": "Rede",
+    "lastname": "Alexander",
+    "email": "ralexander@gmail.com"
+}
+
+###
+
+
+GET http://localhost:8000/api/users/623dc62ce60b22746979282c        
+// get specific user
+###
+            
+GET http://localhost:8000/api/users         
+// get all users
+###
+
+PUT http://localhost:8000/api/users/623e17253c86a6e17df70d20
+Content-Type: application/json
+
+
+{
+    "username": "hlill",
+    "firstname": "Bil",
+    "lastname": "jo",
+    "email": "helo@gmail.com"
+}
+
+###
+
+DELETE http://localhost:8000/api/users/624392f4f131dbd0fa83bf69
+// delete user
+
+
+###
+
+GET http://localhost:8000/api/courses
+// get all courses
+
+###
+
+POST http://localhost:8000/api/courses
+Content-Type: application/json
+
+
+
+{
+    "subject": "COMP",
+    "number": "1232",
+    "title": "Program III",
+    "teacher": "623e17253c86a6e17df70d20"
+}
+
+###
+
+GET http://localhost:8000/api/courses/comp1183
+// get specific course
+
+###
+
+DELETE http://localhost:8000/api/courses/6243ac1c047db6dd935fa382
+// delete course
+
+###
+
+
+PUT http://localhost:8000/api/courses/624491b087499c763cb6d791
+Content-Type: application/json
+// update course
+
+{
+    "subject": "Liob",
+    "number": "1101",
+    "title": "Picklebal",
+    "teacher": "623e17253c86a6e17df70d20"
+}
+
+###
+
+
+PUT http://localhost:8000/api/rosters/62446afce5cd20b13a262976/623efe347c9876e2f2e35c4a
+// add student to course
+
+###
+
+
+GET http://localhost:8000/api/rosters/6243b069d004c5fef26b20a0
+// get all students in a course
+
+###
+
+
+DELETE http://localhost:8000/api/rosters/6243982e9c4e4fa637583b31/623e17253c86a6e17df70d20
+// remove student from course
+
+###
+
+
+
+GET http://localhost:8000/api/courses/users/623efe347c9876e2f2e35c4a
+
+
